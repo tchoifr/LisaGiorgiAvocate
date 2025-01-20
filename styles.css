@@ -16,7 +16,7 @@ h1, h2, h3 {
   font-family: 'Georgia', serif;
 }
 nav {
-  background-color: #000000;
+  background-color: #1e1e1e;
   padding: 10px;
 display: flex;
 align-items: center;
@@ -48,7 +48,7 @@ nav img{
   transition: 0.3s;
 }
 .nav-links a:hover {
-  background-color: #157a9b;
+  background-color: #3d010c;
   border-radius: 5px;
 }
 /* Header Section */
@@ -56,7 +56,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1e1e1e;
+  background-color: #3d010c;
   color: white;
   padding: 50px 20px;
 }
@@ -101,7 +101,7 @@ header {
 #services h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #333;
+  color: #3d010c;
 }
 
 .services-container {
@@ -127,14 +127,14 @@ header {
 
 .service-card p {
   font-size: 1rem;
-  color: #555;
+  color: #3d010c;
 }
 
 /* Honoraire Section */
 #honoraire {
   padding: 60px 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #3d010c;
 }
 
 #honoraire h2 {
@@ -206,7 +206,7 @@ header {
 #contact {
   padding: 60px 20px;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #3d010c;
 }
 
 .contact-container {
