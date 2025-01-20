@@ -1,0 +1,278 @@
+/* Resetting some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Background */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+}
+nav {
+  background-color: #000000;
+  padding: 10px;
+display: flex;
+align-items: center;
+justify-content: space-around;  
+}
+nav img{
+  width: 60px;
+  height: 60px;
+}
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.nav-links li {
+  display: inline;
+}
+.nav-links a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+.nav-links a:hover {
+  background-color: #157a9b;
+  border-radius: 5px;
+}
+/* Header Section */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  color: white;
+  padding: 50px 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.header-text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.header-text p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Domaine d'activité Section */
+#services {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Honoraire Section */
+#honoraire {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+#honoraire h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.honoraires-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.honoraire-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.honoraire-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.honoraire-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Avis Client Section */
+#avis {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+#avis h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.avis-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.avis-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.avis-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.avis-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.map-container {
+  width: 50%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+
+.form-container {
+  width: 40%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #ff4d2d;
+}
+
+/* Footer Section */
+footer {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .footer-links {
+  margin-bottom: 10px;
+}
+
+footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
