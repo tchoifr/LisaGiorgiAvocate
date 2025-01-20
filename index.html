@@ -125,11 +125,19 @@
 
   <!-- Contact Section -->
   <section id="contact">
-    <h2>Contactez-moi</h2>
+    <h2>Contacte</h2>
     <div class="contact-container">
       <div class="map-container">
-        <iframe src="votre-iframe-google-map" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
+        <iframe
+        width="300"
+        height="300"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/place?key=API_KEY
+          &q=Space+Needle,Seattle+WA">
+      </iframe>      </div>
       <div class="form-container">
         <form action="mailto:votre-email@example.com" method="post" enctype="text/plain">
           <label for="name">Nom :</label>

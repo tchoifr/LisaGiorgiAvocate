@@ -251,7 +251,7 @@ form input, form textarea {
 form button {
   width: 100%;
   padding: 12px;
-  background-color: #ff7f50;
+  background-color: #3d010c;
   color: white;
   border: none;
   border-radius: 30px;
@@ -259,7 +259,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #ff4d2d;
+  background-color: #640214;
 }
 
 /* Footer Section */
