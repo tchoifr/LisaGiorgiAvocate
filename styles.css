@@ -113,12 +113,13 @@ header {
 
 .service-card {
   background-color: #fff;
-  padding: 20px;
+  padding: 40px;
   width: 30%;
   margin: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px;
+  border-radius: 20px;
   text-align: left;
+
 }
 
 .service-card h3 {
@@ -170,10 +171,12 @@ header {
 }
 
 /* Avis Client Section */
+/* Section Avis */
 #avis {
   padding: 60px 20px;
   text-align: center;
   background-color: #fff;
+  overflow: hidden; /* Cache le contenu qui dépasse */
 }
 
 #avis h2 {
@@ -182,18 +185,29 @@ header {
   color: #3d010c;
 }
 
+/* Conteneur pour le slider */
 .avis-container {
-  display: flex;
-  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden; /* Cache le contenu qui dépasse */
 }
 
+/* Slider pour les cartes d'avis */
+.avis-slider {
+  display: flex;
+  gap: 20px; /* Espace entre les cartes */
+  animation: scrollAvis 20s linear infinite; /* Animation de défilement */
+}
+
+/* Carte d'avis individuelle */
 .avis-card {
   background-color: #fff;
-  padding: 20px;
-  width: 30%;
-  margin: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+    padding: 20px;
+    min-width: 300px;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 8px;
+    text-align: left;
+    margin: 10px;
 }
 
 .avis-card h3 {
@@ -204,6 +218,23 @@ header {
 .avis-card p {
   font-size: 1rem;
   color: #555;
+}
+
+/* Étoiles de notation */
+.stars {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #FFA500; /* Couleur dorée pour les étoiles */
+}
+
+/* Animation de défilement */
+@keyframes scrollAvis {
+  0% {
+    transform: translateX(0); /* Départ à la position initiale */
+  }
+  100% {
+    transform: translateX(-50%); /* Défilement jusqu'à la moitié du contenu */
+  }
 }
 
 /* Contact Section */
