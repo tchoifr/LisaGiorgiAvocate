@@ -134,8 +134,23 @@ nav {
   .header-text{
     max-width: 300px;
   }
+  .form-container{
+    margin-bottom: 20px;
+  }
+  .map-container{
+    margin-top: 20px;
+  }
+  .honoraire-card{
+    margin-bottom: 15px;
+  }
+  .honoraire-card{
+   width: 80% !important;
+  }
 }
+@media screen and (max-width: 426) {
+  
 
+}
 
 /*End NavBar*/
 
@@ -250,7 +265,6 @@ header {
   margin: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  min-width: 275px;
 }
 
 .honoraire-card h3 {
