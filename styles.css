@@ -15,32 +15,37 @@ body {
 h1, h2, h3 {
   font-family: 'Georgia', serif;
 }
+
+/*NAVBAR*/
+/* Styles généraux */
 nav {
   background-color: #1e1e1e;
   padding: 10px;
-display: flex;
-align-items: center;
-justify-content: space-around;  
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
 }
-nav img{
+
+.nav-left img {
   width: 60px;
   height: 60px;
   border-radius: 25%;
 }
+
+/* Menu desktop */
 .nav-links {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  justify-content: center;
   gap: 20px;
 }
+
 .nav-links li {
   display: inline;
 }
+
 .nav-links a {
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: white;
@@ -48,10 +53,85 @@ nav img{
   padding: 10px 15px;
   transition: 0.3s;
 }
+
 .nav-links a:hover {
   background-color: #3d010c;
-  border-radius: 5px;
+  border-radius: 20px;
 }
+
+/* Hamburger (mobile & tablette) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 40px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #1e1e1e;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  transition: right 0.3s ease-in-out;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar .close-btn {
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+}
+
+
+/*End NavBar*/
+
+
 /* Header Section */
 header {
   display: flex;
@@ -109,6 +189,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  justify-content: center;
 }
 
 .service-card {
@@ -119,6 +200,7 @@ header {
   box-shadow: 0px 0px 10px 0px;
   border-radius: 20px;
   text-align: left;
+  min-width: 300px;
 
 }
 
@@ -149,6 +231,7 @@ header {
 .honoraires-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .honoraire-card {
@@ -158,6 +241,7 @@ header {
   margin: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  min-width: 275px;
 }
 
 .honoraire-card h3 {
@@ -251,10 +335,12 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .map-container {
   width: 50%;
+  min-width: 280px;
 }
 
 .map-container iframe {
@@ -269,6 +355,7 @@ header {
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  min-width: 280px;
 }
 
 form input, form textarea {
