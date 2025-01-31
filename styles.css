@@ -68,7 +68,7 @@ nav {
 }
 
 .hamburger img {
-  width: 40px;
+  filter: invert(1);
 }
 
 /* Sidebar */
@@ -282,7 +282,7 @@ header {
 .avis-slider {
   display: flex;
   gap: 20px; /* Espace entre les cartes */
-  animation: scrollAvis 10s linear infinite; /* Animation de défilement */
+  animation: scrollAvis 15s linear infinite; /* Animation de défilement */
 }
 
 /* Carte d'avis individuelle */
@@ -319,7 +319,7 @@ header {
     transform: translateX(0); /* Départ à la position initiale */
   }
   100% {
-    transform: translateX(-50%); /* Défilement jusqu'à la moitié du contenu */
+    transform: translateX(-100%); /* Défilement jusqu'à la moitié du contenu */
   }
 }
 
