@@ -5,6 +5,11 @@ body {
     background-color: #f4f4f4;
     color: #333;
   }
+  .logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 25%;
+  }
   nav {
     background-color: #3d010c;
     color: white;
