@@ -146,6 +146,10 @@ nav {
   .honoraire-card{
    width: 80% !important;
   }
+  .header-photo{
+    width: 150px !important;
+    height: 185px !important;
+  }
 }
 @media screen and (max-width: 426) {
   
