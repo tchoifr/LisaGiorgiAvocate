@@ -453,10 +453,6 @@ footer {
   text-align: center;
 }
 
-footer .footer-links {
-  margin-bottom: 10px;
-}
-
 footer .footer-links a {
   color: white;
   text-decoration: none;
@@ -466,13 +462,7 @@ footer .footer-links a {
 footer .footer-links a:hover {
   text-decoration: underline;
 }
-/* Footer */
-footer {
-  background-color: #1e1e1e;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+
 
 .footer-links {
   margin-bottom: 10px;
@@ -505,15 +495,6 @@ footer {
   font-size: 1rem;
 }
 
-.footer-contact a img {
-  width:40px;
-  height:40px;
-  transition: transform 0.3s ease-in-out;
-  color: white;
-  padding: 5px;
-  border-radius: 10px;
-  background-color: white;
-}
 
 /* Icônes Réseaux Sociaux */
 .footer-socials {
@@ -530,8 +511,11 @@ footer {
   color: white;
   padding: 5px;
   border-radius: 10px;
-  background-color: white;
-}
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(156deg, rgba(255,255,255,1) 20%, rgba(61,1,12,1) 100%);
+  background: -webkit-linear-gradient(156deg, rgba(255,255,255,1) 20%, rgba(61,1,12,1) 100%);
+  background: linear-gradient(156deg, rgba(255,255,255,1) 20%, rgba(61,1,12,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#3d010c",GradientType=1);}
 
 .footer-socials a:hover img {
   transform: scale(1.1);
