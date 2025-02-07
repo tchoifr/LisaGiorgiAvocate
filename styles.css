@@ -251,6 +251,9 @@ header::before {
   padding:10px;
 
 }
+.card-front h3{
+  padding: 10px;
+}
 .card-back{
   padding: 15px 10px 0px 30px;
 
