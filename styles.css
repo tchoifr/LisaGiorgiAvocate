@@ -247,14 +247,20 @@ header::before {
 .service-card.flipped .card-inner {
   transform: rotateY(180deg);
 }
+.card-front{
+  padding:10px;
 
+}
+.card-back{
+  padding: 15px 10px 0px 30px;
+
+}
 .card-front, .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
   background: white;
-  padding: 15px 10px 0px 30px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   text-align: center;
