@@ -107,10 +107,18 @@ nav {
 }
 
 .sidebar ul li {
-  margin: 20px 0;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px;
+  transition: 0.3s;
+  background-color: #3d010c;
+  border-radius: 20px;
+  margin: 5px;
   text-align: center;
 }
-
 .sidebar ul li a {
   text-decoration: none;
   font-size: 18px;
@@ -119,6 +127,7 @@ nav {
   text-transform: uppercase;
   padding: 10px 15px;
 }
+/*End NavBar*/
 
 /* Responsive */
 @media screen and (max-width: 1024px) {
@@ -145,19 +154,13 @@ nav {
     margin-bottom: 15px;
   }
   .honoraire-card{
-   width: 80% !important;
+   width: 95% !important;
   }
   .header-photo{
     width: 150px !important;
     height: 185px !important;
   }
 }
-@media screen and (max-width: 426) {
-  
-
-}
-
-/*End NavBar*/
 
 
 /* Header Section */
