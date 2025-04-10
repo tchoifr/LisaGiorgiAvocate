@@ -1,61 +1,86 @@
+:root {
+  --primary-color: #806A52;
+  --secondary-color: #c5ab77;
+  --accent-color: #3d010c;
+  --hover-color: #cc3d00;
+  --text-color: #555;
+  --background-color: #f4f4f4;
+  --border-color: #ffffff;
+  --star-color: #996300;
+  --button-bg-color: #3d010c;
+  --button-hover-bg-color: #cc3d00;
+  --footer-bg-color: #333;
+  --footer-text-color: #baab94;
+  --footer-link-hover-color: #704d03;
+  --scrollbar-bg-color: #f1f1f1;
+  --scrollbar-thumb-color: #888;
+  --scrollbar-thumb-hover-color: #555;
+  --service-item-bg-color: #f4f4f4;
+  --partner-item-bg-color: #f8f8f8;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px; 
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
 
-  }
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-
-/*scrool bar*/
+/* Scroll bar */
 ::-webkit-scrollbar {
-    width: 8px;
-    background-color: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+  width: 8px;
+  background-color: var(--scrollbar-bg-color);
 }
 
-li a:hover{
-color: white;
-transition: color 0.3s ease-in-out;
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color);
+}
+
+li a:hover {
+  color: white;
+  transition: color 0.3s ease-in-out;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    padding-bottom: 0px;
-    background-color: #c5ab77;
-    color: white;
-    position: fixed;
-    transition: all 0.3s ease-in-out;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 0px;
+  background-color: var(--secondary-color);
+  color: white;
+  position: fixed;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
+
 .container img {
-    width: 180px;
+  width: 180px;
 }
+
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
 }
-/*navbar*/
-/* Structure du menu */
+
+/* Navbar */
 .nav {
   position: relative;
   display: flex;
@@ -63,14 +88,12 @@ transition: color 0.3s ease-in-out;
   align-items: center;
 }
 
-/* Structure du menu classique */
 .nav ul {
   list-style: none;
   gap: 15px;
   padding: 5px;
 }
 
-/* Styles des liens */
 .nav a {
   text-decoration: none;
   color: black;
@@ -78,10 +101,9 @@ transition: color 0.3s ease-in-out;
   padding: 10px;
 }
 
-/* Animation du bouton hamburger */
 .menu {
-  --s: 35px; /* contrôle la taille */
-  --c: black; /* couleur */
+  --s: 35px;
+  --c: black;
   height: var(--s);
   width: var(--s);
   border: none;
@@ -90,16 +112,12 @@ transition: color 0.3s ease-in-out;
   box-sizing: content-box;
   --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
   --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
-  background: 
-    var(--_g2) left var(--_p, 0px) top,
-    var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
-    var(--_g2) right var(--_p, 0px) top,
-    var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+  background: var(--_g2) left var(--_p, 0px) top, var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top, var(--_g2) right var(--_p, 0px) top, var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
   background-size: 20% 80%, 40% 100%;
   position: relative;
   clip-path: inset(0 25%);
   cursor: pointer;
-  transition: background-position .3s ease, clip-path 0.3s ease; /* Transition fluide pour le hamburger */
+  transition: background-position .3s ease, clip-path 0.3s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -112,10 +130,9 @@ transition: color 0.3s ease-in-out;
   border-radius: var(--s);
   inset: 40% 0;
   background: var(--c);
-  transition: transform 0.2s ease; /* Transition fluide pour la transformation */
+  transition: transform 0.2s ease;
 }
 
-/* Animation du hamburger en croix (au clic) */
 .menu.open:before {
   transform: rotate(45deg);
 }
@@ -124,28 +141,26 @@ transition: color 0.3s ease-in-out;
   transform: rotate(-45deg);
 }
 
-
-
-/* Effet de fond derrière le menu */
 .nav.open .menu {
   background-image: none;
-  transform: rotate(45deg); /* Transformation de l'icône du hamburger */
+  transform: rotate(45deg);
   transition: transform 0.2s ease;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  margin-top: 60px;
+  width: 100%;
+}
 
-/*end nav*/
-.hero{
-    position: relative;
-    margin-top: 60px;
-    width: 100%;
-}
 .hero img {
-    width: 100%;
-    max-height: 100vh;
-    object-fit: cover;
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
 }
-.hero-bloc-text{
+
+.hero-bloc-text {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -156,13 +171,14 @@ transition: color 0.3s ease-in-out;
   align-items: center;
   text-align: center;
 }
-.hero-bloc-text h1{
-    font-size: 50px;
-    font-weight: 800;
-    color: #806A52;
-   
+
+.hero-bloc-text h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--primary-color);
 }
-.bloc-hero{
+
+.bloc-hero {
   background: rgba(255, 255, 255, 0.2);
   padding: 15px;
   border-radius: 20px;
@@ -172,82 +188,84 @@ transition: color 0.3s ease-in-out;
   align-items: center;
   justify-content: center;
 }
-.bloc-hero h1, .bloc-hero h2{
+
+.bloc-hero h1,
+.bloc-hero h2 {
   color: #ffffff !important;
 }
-.bloc-hero img{
+
+.bloc-hero img {
   width: 200px;
   height: 250px;
 }
- h2{
-    color: #806A52;
-}
- h3{
-    font-size: 30px;
-    font-weight: 800;
-    margin: 5px;
-    color: #806A52;
-    opacity: 1;
-    visibility: visible;
-}
-.hero-bloc-text a{
-    all: unset;
-    cursor: pointer;
-}
-.hero-bloc-text a:hover{
-    color: #3d010c;
-    transition: color 0.2s ease-in-out;
+
+h2 {
+  color: var(--primary-color);
 }
 
+h3 {
+  font-size: 30px;
+  font-weight: 800;
+  margin: 5px;
+  color: var(--primary-color);
+  opacity: 1;
+  visibility: visible;
+}
 
+.hero-bloc-text a {
+  all: unset;
+  cursor: pointer;
+}
+
+.hero-bloc-text a:hover {
+  color: #3d010c;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Service Section */
 .service-list {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 35px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
 }
 
 .service-item {
-    width: 25%;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
-    transition: transform 0.2s ease-in-out; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 25%;
+  background-color: var(--service-item-bg-color);
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-/* Conteneur principal */
-.container-why {
-    width: 90%;
-    max-width: 800px;
-    margin: 50px auto;
-    text-align: center;
-    padding: 40px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-image: url(/public/assets/images/Palais_de_justice_de_Marseille.jpg);
-    z-index: 1;
-    text-align: center;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
+
+.service-item:hover {
+  transform: scale(1.1);
 }
-.h1style{
-  font-size: 50px;
-  font-weight: 800;
-  color: #806A52;
-  opacity: 1;
-  visibility: visible;
-  margin: 10px;
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  background-color: var(--button-bg-color);
+  text-decoration: none;
+  border-radius: 15px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+.btn:hover {
+  color: white;
+  background-color: var(--button-hover-bg-color);
+  transform: scale(1.05);
+}
+
 #Domaine{
   text-align: center;
 }
@@ -277,90 +295,34 @@ transition: color 0.3s ease-in-out;
     border-radius: 20px;
     backdrop-filter: blur(15px);
 }
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-    background-color: #3d010c;
-    text-decoration: none;
-    border-radius: 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.btn:hover {
-  color: white;
-    background-color: #cc3d00;
-    transform: scale(1.05);
-}
-
-/* Conteneur partner */
-.partner-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Section partenaire */
-.partner-area {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-
-/* Élément partenaire */
-.partner-item {
-    width: 200px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
-    transition: transform 0.2s ease-in-out;
-}
-
-
-.service-item:hover{
-    transform: scale(1.1);
-}
-/* Avis Client Section */
-/* Section Avis */
+/* Avis Section */
 #avis {
   padding: 60px 20px;
   text-align: center;
   background-color: #fff;
-  overflow: hidden; /* Cache le contenu qui dépasse */
+  overflow: hidden;
 }
 
-
-/* Conteneur pour le slider */
 .avis-container {
   max-width: 1200px;
   margin: 0 auto;
-  overflow: hidden; /* Cache le contenu qui dépasse */
+  overflow: hidden;
 }
 
-/* Slider pour les cartes d'avis */
 .avis-slider {
   display: flex;
-  gap: 20px; /* Espace entre les cartes */
-  animation: scrollAvis 15s linear infinite; /* Animation de défilement */
+  gap: 20px;
+  animation: scrollAvis 15s linear infinite;
 }
 
-/* Carte d'avis individuelle */
 .avis-card {
   background-color: #fff;
-    padding: 20px;
-    min-width: 300px;
-    box-shadow: 0px 0px 5px 0px;
-    border-radius: 8px;
-    text-align: left;
-    margin: 10px;
+  padding: 20px;
+  min-width: 300px;
+  box-shadow: 0px 0px 5px 0px;
+  border-radius: 8px;
+  text-align: left;
+  margin: 10px;
 }
 
 .avis-card h3 {
@@ -370,135 +332,154 @@ transition: color 0.3s ease-in-out;
 
 .avis-card p {
   font-size: 1rem;
-  color: #555;
+  color: var(--text-color);
 }
 
-/* Étoiles de notation */
 .stars {
   margin-top: 10px;
   font-size: 1.5rem;
-  color: #996300; /* Couleur dorée pour les étoiles */
+  color: var(--star-color);
 }
 
-/* Animation de défilement */
 @keyframes scrollAvis {
   0% {
-    transform: translateX(0); /* Départ à la position initiale */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Défilement jusqu'à la moitié du contenu */
+    transform: translateX(-100%);
   }
 }
 
-/* General styling for the blog row and columns */
+/* Blog Section */
 .blog-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .blog-col {
-    width: 26%;
-    box-sizing: border-box;
-    margin-bottom: 20px;
-    min-height: 430px;
-  }
-  
-  /* Styling for the blog card */
-  .blog-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    height: 100%;
-    box-shadow:  0px 5px 30px 0px rgb(148 146 245 / 15%);
-    transition: transform 0.2s ease-in-out;
-    padding: 15px;
-  }
-  
-  .blog-card:hover {
-    transform: translateY(-10px);
-  }
-  
-  /* Blog card image */
-  .blog-card-img {
-    width: 80%;
-    height: auto;
-    object-fit: cover;
-    padding: 10px;
-    border-radius: 25px;
-    margin-top: 20px;
-  }
-  
-  /* Blog card body */
-  .blog-card-body {
-    padding: 15px;
-  }
-  
-  .blog-card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  .blog-card-text {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  /* Add animation (example with fadeIn effect) */
-  @keyframes blog-fadeInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-  
-  .wow.blog-fadeInLeft {
-    animation: blog-fadeInLeft 0.6s ease-out;
-  }
-  
-  /* Delay animation */
-  [data-wow-delay="0.2s"] {
-    animation-delay: 0.2s;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-/* Styles de base du footer */
+.blog-col {
+  width: 26%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  min-height: 430px;
+}
+
+.blog-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.blog-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.blog-card-front,
+.blog-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: var(--secondary-color);
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
+}
+
+.blog-card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blog-card-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transform: rotateY(180deg);
+  overflow: auto;
+}
+
+.blog-card.flipped .blog-card-inner {
+  transform: rotateY(180deg);
+}
+
+.blog-card-back ul {
+  padding: 20px;
+}
+
+.blog-card li {
+  list-style-type: circle;
+  margin-top: 10px;
+}
+
+/* Flip Button */
+.flip-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+.flip-btn:hover {
+  background-color: #64503b;
+}
+
+.blog-card-front h3,
+.blog-card-back h3 {
+  color: white !important;
+}
+
+/* Footer Section */
 .footer {
-  background-color: #333;
-  color: #baab94;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
   padding: 25px 0px;
   font-family: Arial, sans-serif;
 }
-.footerA{
-  width:40px;
-  height:40px;
+
+.footerA {
+  width: 40px;
+  height: 40px;
   transition: transform 0.3s ease-in-out;
   color: white;
   padding: 5px;
   border-radius: 10px;
-  background: rgb(255,255,255);
-  background: -moz-linear-gradient(156deg, rgba(255,255,255,1) 20%, #704d03 100%);
-  background: -webkit-linear-gradient(156deg, rgba(255,255,255,1) 20%, #704d03 100%);
-  background: linear-gradient(156deg, rgba(255,255,255,1) 20%, #704d03 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#3d010c",GradientType=1);
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(156deg, rgba(255, 255, 255, 1) 20%, #704d03 100%);
+  background: -webkit-linear-gradient(156deg, rgba(255, 255, 255, 1) 20%, #704d03 100%);
+  background: linear-gradient(156deg, rgba(255, 255, 255, 1) 20%, #704d03 100%);
 }
-.footerA:hover{
-  transform: scale(1.1);
 
+.footerA:hover {
+  transform: scale(1.1);
 }
-/* Container du footer pour aligner les éléments */
+
 .footer-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-/* Section des logos */
 .footer-logos {
   display: flex;
   align-items: center;
@@ -510,7 +491,6 @@ transition: color 0.3s ease-in-out;
   height: auto;
 }
 
-/* Section des informations */
 .footer-info {
   display: flex;
   flex-direction: column;
@@ -529,20 +509,22 @@ transition: color 0.3s ease-in-out;
 
 .footer-info a {
   text-decoration: none;
-  color: #baab94;
+  color: var(--footer-text-color);
 }
 
 .footer-info a:hover {
   text-decoration: underline;
 }
-.droit-reserver{
+
+.droit-reserver {
   width: 100%;
   padding-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* Section de la carte */
+
+/* Map Section */
 .map-container {
   margin: 40px auto;
   padding: 20px;
@@ -556,3 +538,32 @@ transition: color 0.3s ease-in-out;
   height: 450px;
 }
 
+/* Container principal */
+.container-why {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 40px;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url(/public/assets/images/Palais_de_justice_de_Marseille.jpg);
+  z-index: 1;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.h1style {
+  font-size: 50px;
+  font-weight: 800;
+  color: var(--hero-text-color);
+  opacity: 1;
+  visibility: visible;
+  margin: 10px;
+}

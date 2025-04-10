@@ -9,3 +9,12 @@ menuToggle.addEventListener('click', () => {
   menu.classList.toggle('open');
   nav.classList.toggle('open');
 });
+
+
+function flipCard(button) {
+  // Récupérer la carte parent
+  const card = button.closest('.blog-card');
+  
+  // Ajouter ou retirer la classe "flipped" pour déclencher la rotation
+  card.classList.toggle('flipped');
+}
