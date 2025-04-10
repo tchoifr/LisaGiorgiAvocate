@@ -247,6 +247,9 @@ transition: color 0.3s ease-in-out;
 #Domaine{
   text-align: center;
 }
+#Honoraires{
+  text-align: center;
+}
 /* Titres */
 .container-why h2 {
     color: white;
