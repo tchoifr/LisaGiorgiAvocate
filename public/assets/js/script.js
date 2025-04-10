@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
+    const menuToggle = document.querySelector("#menu-toggle"); // Utilisation de #menu-toggle
     const sidebar = document.querySelector(".sidebar");
     const closeBtn = document.querySelector(".close-btn");
-    const sidebarLinks = document.querySelectorAll(".sidebar a"); // Sélectionne tous les liens du menu
+    const sidebarLinks = document.querySelectorAll(".sidebar a");
 
-    hamburger.addEventListener("click", function () {
-        sidebar.classList.toggle("active");
-    });
+    if (menuToggle) {
+        menuToggle.addEventListener("click", function () {
+            sidebar.classList.toggle("active");
+        });
+    }
 
-    closeBtn.addEventListener("click", function () {
-        sidebar.classList.remove("active");
-    });
-
-    // Fermer le menu si on clique en dehors
-    document.addEventListener("click", function (event) {
-        if (!sidebar.contains(event.target) && !hamburger.contains(event.target)) {
+    if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
             sidebar.classList.remove("active");
-        }
-    });
+        });
+    }
 
-    // Fermer le menu lorsqu'on clique sur un lien du menu
+    if (sidebar) {
+        document.addEventListener("click", function (event) {
+            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    }
+
     sidebarLinks.forEach(link => {
         link.addEventListener("click", function () {
             sidebar.classList.remove("active");

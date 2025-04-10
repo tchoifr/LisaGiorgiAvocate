@@ -1,336 +1,326 @@
-/* Resetting some default styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 html {
-  scroll-behavior: smooth;
-}
-/* Body & Background */
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; 
+
+  }
 body {
-  font-family: 'Georgia', serif;
-  background-color: #f4f4f4;
-  color: #333;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'Georgia', serif;
+
+/*scrool bar*/
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
 }
 
-/*NAVBAR*/
-/* Styles généraux */
-nav {
-  background-color: #1e1e1e;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  position: relative;
+li a:hover{
+color: #3d010c;
+transition: color 0.3s ease-in-out;
 }
 
-.nav-left img {
-  width: 60px;
-  height: 60px;
-  border-radius: 25%;
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 0px;
+    background-color: #c5ab77;
+    color: white;
+    position: fixed;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
-
-/* Menu desktop */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.container img {
+    width: 180px;
 }
-
-.nav-links li {
-  display: inline;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
-
-.nav-links a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  padding: 10px 15px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  background-color: #3d010c;
-  border-radius: 15px;
-}
-
-/* Hamburger (mobile & tablette) */
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.hamburger img {
-  filter: invert(1);
-}
-
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -250px;
-  width: 250px;
-  height: 100vh;
-  background-color: #1e1e1e;
-  box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
-}
-
-.sidebar.active {
-  right: 0;
-}
-
-.sidebar .close-btn {
-  font-size: 30px;
-  color: white;
-  background: none;
-  border: none;
-  cursor: pointer;
-  align-self: flex-end;
-  margin: 10px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 20px;
-}
-
-.sidebar ul li {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  padding: 10px;
-  transition: 0.3s;
-  background-color: #3d010c;
-  border-radius: 20px;
-  margin: 5px;
-  text-align: center;
-}
-.sidebar ul li a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-  text-transform: uppercase;
-  padding: 10px 15px;
-}
-/*End NavBar*/
-
-/* Responsive */
-@media screen and (max-width: 1024px) {
-  .hamburger {
-    display: block;
+/*navbar*/
+/* Structure du menu */
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
-  .nav-links {
-    display: none;
+  /* Structure du menu classique */
+  .nav ul {
+    list-style: none;
+    gap: 15px;
+    padding: 5px;
   }
-  header{
-    justify-content: center;
+  
+  /* Styles des liens */
+  .nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
   }
-  .header-text{
-    max-width: 300px;
+  
+  /* Animation du bouton hamburger */
+  .menu {
+    --s: 35px; /* contrôle la taille */
+    --c: white; /* couleur */
+    height: var(--s);
+    width: var(--s);
+    border: none;
+    padding: 0;
+    border-inline: calc(var(--s)/2) solid #0000;
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+    background: 
+      var(--_g2) left var(--_p, 0px) top,
+      var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
+      var(--_g2) right var(--_p, 0px) top,
+      var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+    background-size: 20% 80%, 40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    cursor: pointer;
+    transition: background-position .3s ease, clip-path 0.3s ease; /* Transition fluide pour le hamburger */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
-  .form-container{
-    margin-bottom: 20px;
+  
+  .menu:before,
+  .menu:after {
+    content: "";
+    position: absolute;
+    border-radius: var(--s);
+    inset: 40% 0;
+    background: var(--c);
+    transition: transform 0.2s ease; /* Transition fluide pour la transformation */
   }
-  .map-container{
-    margin-top: 20px;
+  
+  /* Animation du hamburger en croix (au clic) */
+  .menu.open:before {
+    transform: rotate(45deg);
   }
-  .honoraire-card{
-    margin-bottom: 15px;
+  
+  .menu.open:after {
+    transform: rotate(-45deg);
   }
-  .honoraire-card{
-   width: 95% !important;
+  
+
+  
+  /* Effet de fond derrière le menu */
+  .nav.open .menu {
+    background-image: none;
+    transform: rotate(45deg); /* Transformation de l'icône du hamburger */
+    transition: transform 0.2s ease;
   }
-  .header-photo{
-    width: 150px !important;
-    height: 185px !important;
-  }
+  
+  
+/*end nav*/
+.hero{
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
 }
-
-
-/* Header Section */
-header {
-  position: relative;
+.hero img {
+    width: 100%;
+    max-height: 100vh;
+    object-fit: cover;
+}
+.hero-bloc-text{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('../images/Palais_de_justice_de_Marseille.jpg') no-repeat center center/cover;
-  color: white;
-  padding: 100px 20px;
-}
-
-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Ajuste l’opacité ici */
-  z-index: 1;
-}
-
-.header-container {
-  position: relative;
-  z-index: 2; /* Assure que le texte et l'image restent au-dessus */
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  width: 100%;
-}
-
-
-.header-photo {
-  width: 200px;
-  height: 250px;
-  border-radius: 25%;
-  object-fit: cover;
-}
-
-.header-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.header-text h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.header-text p {
-  font-size: 1rem;
-  color: #ddd;
-}
-
-
-/*domaine dactiviter*/
-#services {
   text-align: center;
-  padding: 50px 20px;
-  background: #f8f9fa;
 }
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
+.hero-bloc-text h1{
+    font-size: 50px;
+    font-weight: 800;
+    color: #806A52;
+   
 }
-
-/* Conteneur des cartes */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-/* Cartes */
-.service-card {
-  perspective: 1000px;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-  height: 370px; /* Hauteur définie */
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s ease-in-out;
-}
-
-/* Faces des cartes */
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.bloc-hero{
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  backface-visibility: hidden;
-  overflow-y: auto; /* Ajout du scroll vertical uniquement si nécessaire */
+  align-items: center;
+  justify-content: center;
+}
+.bloc-hero h1, .bloc-hero h2{
+  color: #ffffff !important;
+}
+ h2{
+    color: #806A52;
+}
+ h3{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 5px;
+    color: #806A52;
+    opacity: 1;
+    visibility: visible;
+}
+.hero-bloc-text a{
+    all: unset;
+    cursor: pointer;
+}
+.hero-bloc-text a:hover{
+    color: #3d010c;
+    transition: color 0.2s ease-in-out;
 }
 
-.service-card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-.card-back {
-  transform: rotateY(180deg);
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
 }
 
-/* Boutons */
-.flip-button {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #3d010c;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.service-item {
+    width: 25%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
+    transition: transform 0.2s ease-in-out; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
-.flip-button:hover {
-  background: rgb(82, 5, 22);
+/* Conteneur principal */
+.container-why {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(/public/assets/images/Palais_de_justice_de_Marseille.jpg);
+    z-index: 1;
+    text-align: center;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
-/* Honoraire Section */
-#honoraire {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #3d010c;
-}
-
-#honoraire h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: white;
-}
-
-.honoraires-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.honoraire-card {
-  background-color: #fff;
-  padding: 20px;
-  width: 30%;
+.h1style{
+  font-size: 50px;
+  font-weight: 800;
+  color: #806A52;
+  opacity: 1;
+  visibility: visible;
   margin: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+}
+#Domaine{
+  text-align: center;
+}
+/* Titres */
+.container-why h2 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.honoraire-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+.container-why h3 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+}  
+.container-why h4 {
+    font-size: 15px;
+    color: white;
+    margin-bottom: 20px;
+}   
+.thecar-theme-reservation-area{
+    background: #c5ab7799;
+    padding: 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+}
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background-color: #3d010c;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  color: white;
+    background-color: #cc3d00;
+    transform: scale(1.05);
 }
 
-.honoraire-card p {
-  font-size: 1rem;
-  color: #555;
+/* Conteneur partner */
+.partner-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
 }
 
+/* Section partenaire */
+.partner-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Élément partenaire */
+.partner-item {
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.service-item:hover{
+    transform: scale(1.1);
+}
 /* Avis Client Section */
 /* Section Avis */
 #avis {
@@ -340,11 +330,6 @@ h2 {
   overflow: hidden; /* Cache le contenu qui dépasse */
 }
 
-#avis h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #3d010c;
-}
 
 /* Conteneur pour le slider */
 .avis-container {
@@ -398,132 +383,91 @@ h2 {
   }
 }
 
-/* Contact Section */
-#contact {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #3d010c;
-}
-.title-contact{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-}
-#contact h2 {
-  font-size: 2.5rem;
-  color: #3d010c;
-}
-.contact-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
+/* General styling for the blog row and columns */
+.blog-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .blog-col {
+    width: 26%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    min-height: 430px;
+  }
+  
+  /* Styling for the blog card */
+  .blog-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow:  0px 5px 30px 0px rgb(148 146 245 / 15%);
+    transition: transform 0.2s ease-in-out;
+    padding: 15px;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Blog card image */
+  .blog-card-img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+  }
+  
+  /* Blog card body */
+  .blog-card-body {
+    padding: 15px;
+  }
+  
+  .blog-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .blog-card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Add animation (example with fadeIn effect) */
+  @keyframes blog-fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .wow.blog-fadeInLeft {
+    animation: blog-fadeInLeft 0.6s ease-out;
+  }
+  
+  /* Delay animation */
+  [data-wow-delay="0.2s"] {
+    animation-delay: 0.2s;
+  }
 
-.map-container {
-  width: 50%;
-  min-width: 280px;
+/* Styles de base du footer */
+.footer {
+  background-color: #333;
+  color: #baab94;
+  padding: 25px 0px;
+  font-family: Arial, sans-serif;
 }
-
-.map-container iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-}
-
-.form-container {
-  width: 40%;
-  background-color: #fff;
-  padding: 40px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  min-width: 280px;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-form button {
-  width: 100%;
-  padding: 12px;
-  background-color: #3d010c;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #640214;
-}
-
-/* Footer Section */
-footer {
-  background-color: #1e1e1e;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-footer .footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-footer .footer-links a:hover {
-  text-decoration: underline;
-}
-
-
-.footer-links {
-  margin-bottom: 10px;
-}
-
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* Icônes Contact (Email & Téléphone) */
-.footer-contact {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 10px;
-}
-
-.footer-contact a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-
-/* Icônes Réseaux Sociaux */
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 10px;
-}
-
-.footer-socials a img {
+.footerA{
   width:40px;
   height:40px;
   transition: transform 0.3s ease-in-out;
@@ -534,8 +478,72 @@ footer .footer-links a:hover {
   background: -moz-linear-gradient(156deg, rgba(255,255,255,1) 20%, rgba(61,1,12,1) 100%);
   background: -webkit-linear-gradient(156deg, rgba(255,255,255,1) 20%, rgba(61,1,12,1) 100%);
   background: linear-gradient(156deg, rgba(255,255,255,1) 20%, rgba(61,1,12,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#3d010c",GradientType=1);}
-
-.footer-socials a:hover img {
-  transform: scale(1.1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#3d010c",GradientType=1);
 }
+.footerA:hover{
+  transform: scale(1.1);
+
+}
+/* Container du footer pour aligner les éléments */
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Section des logos */
+.footer-logos {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Section des informations */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+}
+
+.footer-info h3 {
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info a {
+  text-decoration: none;
+  color: #baab94;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+.droit-reserver{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Section de la carte */
+.map-container {
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.map-container iframe {
+  border-radius: 10px;
+  max-width: 100%;
+  width: 600px;
+  height: 450px;
+}
+
