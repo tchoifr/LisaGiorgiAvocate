@@ -27,7 +27,7 @@ body {
 }
 
 li a:hover{
-color: #3d010c;
+color: white;
 transition: color 0.3s ease-in-out;
 }
 
@@ -57,83 +57,83 @@ transition: color 0.3s ease-in-out;
 /*navbar*/
 /* Structure du menu */
 .nav {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Structure du menu classique */
-  .nav ul {
-    list-style: none;
-    gap: 15px;
-    padding: 5px;
-  }
-  
-  /* Styles des liens */
-  .nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    padding: 10px;
-  }
-  
-  /* Animation du bouton hamburger */
-  .menu {
-    --s: 35px; /* contrôle la taille */
-    --c: white; /* couleur */
-    height: var(--s);
-    width: var(--s);
-    border: none;
-    padding: 0;
-    border-inline: calc(var(--s)/2) solid #0000;
-    box-sizing: content-box;
-    --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
-    --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
-    background: 
-      var(--_g2) left var(--_p, 0px) top,
-      var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
-      var(--_g2) right var(--_p, 0px) top,
-      var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
-    background-size: 20% 80%, 40% 100%;
-    position: relative;
-    clip-path: inset(0 25%);
-    cursor: pointer;
-    transition: background-position .3s ease, clip-path 0.3s ease; /* Transition fluide pour le hamburger */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-  
-  .menu:before,
-  .menu:after {
-    content: "";
-    position: absolute;
-    border-radius: var(--s);
-    inset: 40% 0;
-    background: var(--c);
-    transition: transform 0.2s ease; /* Transition fluide pour la transformation */
-  }
-  
-  /* Animation du hamburger en croix (au clic) */
-  .menu.open:before {
-    transform: rotate(45deg);
-  }
-  
-  .menu.open:after {
-    transform: rotate(-45deg);
-  }
-  
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  
-  /* Effet de fond derrière le menu */
-  .nav.open .menu {
-    background-image: none;
-    transform: rotate(45deg); /* Transformation de l'icône du hamburger */
-    transition: transform 0.2s ease;
-  }
-  
-  
+/* Structure du menu classique */
+.nav ul {
+  list-style: none;
+  gap: 15px;
+  padding: 5px;
+}
+
+/* Styles des liens */
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  padding: 10px;
+}
+
+/* Animation du bouton hamburger */
+.menu {
+  --s: 35px; /* contrôle la taille */
+  --c: black; /* couleur */
+  height: var(--s);
+  width: var(--s);
+  border: none;
+  padding: 0;
+  border-inline: calc(var(--s)/2) solid #0000;
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%, var(--c) 95%, #0000) repeat-y content-box border-box;
+  background: 
+    var(--_g2) left var(--_p, 0px) top,
+    var(--_g1) left calc(var(--s)/10 + var(--_p, 0px)) top,
+    var(--_g2) right var(--_p, 0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p, 0px)) top;
+  background-size: 20% 80%, 40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  cursor: pointer;
+  transition: background-position .3s ease, clip-path 0.3s ease; /* Transition fluide pour le hamburger */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.menu:before,
+.menu:after {
+  content: "";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform 0.2s ease; /* Transition fluide pour la transformation */
+}
+
+/* Animation du hamburger en croix (au clic) */
+.menu.open:before {
+  transform: rotate(45deg);
+}
+
+.menu.open:after {
+  transform: rotate(-45deg);
+}
+
+
+
+/* Effet de fond derrière le menu */
+.nav.open .menu {
+  background-image: none;
+  transform: rotate(45deg); /* Transformation de l'icône du hamburger */
+  transition: transform 0.2s ease;
+}
+
+
 /*end nav*/
 .hero{
     position: relative;
@@ -174,6 +174,10 @@ transition: color 0.3s ease-in-out;
 }
 .bloc-hero h1, .bloc-hero h2{
   color: #ffffff !important;
+}
+.bloc-hero img{
+  width: 200px;
+  height: 250px;
 }
  h2{
     color: #806A52;
@@ -373,7 +377,7 @@ transition: color 0.3s ease-in-out;
 .stars {
   margin-top: 10px;
   font-size: 1.5rem;
-  color: #FFA500; /* Couleur dorée pour les étoiles */
+  color: #996300; /* Couleur dorée pour les étoiles */
 }
 
 /* Animation de défilement */

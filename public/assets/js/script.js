@@ -1,32 +1,11 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector("#menu-toggle"); // Utilisation de #menu-toggle
-    const sidebar = document.querySelector(".sidebar");
-    const closeBtn = document.querySelector(".close-btn");
-    const sidebarLinks = document.querySelectorAll(".sidebar a");
+// Sélectionner les éléments du DOM
+const menuToggle = document.getElementById('menu-toggle');
+const nav = document.querySelector('.nav');
+const menu = document.querySelector('.menu');
 
-    if (menuToggle) {
-        menuToggle.addEventListener("click", function () {
-            sidebar.classList.toggle("active");
-        });
-    }
-
-    if (closeBtn) {
-        closeBtn.addEventListener("click", function () {
-            sidebar.classList.remove("active");
-        });
-    }
-
-    if (sidebar) {
-        document.addEventListener("click", function (event) {
-            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
-                sidebar.classList.remove("active");
-            }
-        });
-    }
-
-    sidebarLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            sidebar.classList.remove("active");
-        });
-    });
+// Ajouter un écouteur d'événements sur le bouton hamburger
+menuToggle.addEventListener('click', () => {
+  // Ajouter ou supprimer la classe 'open' sur le menu et le bouton
+  menu.classList.toggle('open');
+  nav.classList.toggle('open');
 });
