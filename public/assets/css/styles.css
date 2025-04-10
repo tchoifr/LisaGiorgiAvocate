@@ -508,6 +508,7 @@ transition: color 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: start;
   max-width: 300px;
 }
 
@@ -529,6 +530,7 @@ transition: color 0.3s ease-in-out;
 }
 .droit-reserver{
   width: 100%;
+  padding-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
