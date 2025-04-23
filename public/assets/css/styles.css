@@ -364,7 +364,7 @@ h3 {
   width: 26%;
   box-sizing: border-box;
   margin-bottom: 20px;
-  min-height: 430px;
+  min-height: 600px;
 }
 
 .blog-card {
@@ -448,7 +448,7 @@ h3 {
 
 .blog-card-front h3,
 .blog-card-back h3 {
-  color: white !important;
+  color: black !important;
 }
 
 /* Footer Section */
