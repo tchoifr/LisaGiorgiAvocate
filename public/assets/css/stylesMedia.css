@@ -22,7 +22,7 @@
    @media (max-width: 900px) {
      .blog-col{
          width: 70%;
-         min-height: 400px;
+         min-height: 430px;
         }
         .bloc-hero img{
           display: none;
