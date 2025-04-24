@@ -1,17 +1,14 @@
 :root {
   --primary-color: #576b62;
   --secondary-color: #819089;
-  --accent-color: #3d010c;
   --hover-color: black;
   --text-color: #555;
   --background-color: white;
   --border-color: white;
   --star-color: #819089;
-  --button-bg-color: #3d010c;
   --button-hover-bg-color: #54615b;
   --footer-bg-color: #576b62;
   --footer-text-color: white;
-  --footer-link-hover-color: #704d03;
   --scrollbar-bg-color: #f1f1f1;
   --scrollbar-thumb-color: #888;
   --scrollbar-thumb-hover-color: #555;
@@ -246,23 +243,7 @@ h3 {
 }
 
 /* Button */
-.btn {
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-  background-color: var(--button-bg-color);
-  text-decoration: none;
-  border-radius: 15px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-.btn:hover {
-  color: var(--hover-color);
-  background-color: var(--button-hover-bg-color);
-  transform: scale(1.05);
-}
 
 #Domaine{
   text-align: center;
