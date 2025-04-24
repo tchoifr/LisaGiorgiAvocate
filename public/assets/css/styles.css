@@ -529,7 +529,7 @@ h3 {
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(/public/assets/images/Palais_de_justice_de_Marseille.webp);
