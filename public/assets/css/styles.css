@@ -230,7 +230,7 @@ h3 {
   background-color: var(--background-color);
   border-radius: 5px;
   padding: 30px;
-  box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
+  box-shadow: 0px 5px 30px 0px #576b6296;
   transition: transform 0.2s ease-in-out;
   display: flex;
   flex-direction: column;
@@ -298,7 +298,7 @@ h3 {
   background-color: var(--background-color);
   padding: 20px;
   min-width: 300px;
-  box-shadow: 0px 5px 30px 0px rgb(148 146 245 / 15%);
+  box-shadow: 0px 5px 30px 0px #576b6296;
   border-radius: 8px;
   text-align: left;
   margin: 10px;
