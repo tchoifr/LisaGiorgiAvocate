@@ -24,9 +24,17 @@
          width: 70%;
          min-height: 430px;
         }
-        .bloc-hero img{
-          display: none;
-         }
+        .bloc-hero img {
+          width: 70px;
+          height: 90px;
+      }
+      .bloc-hero{
+        margin-top: 50px;
+      }
+      .logo img {
+        width: 70px !important;
+        height: 70px !important;
+      }
         .nav ul {
           display: none;
           flex-direction: column;
