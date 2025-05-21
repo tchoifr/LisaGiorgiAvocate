@@ -75,7 +75,7 @@ li a:hover {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
   color: var(--color-white);
@@ -103,7 +103,7 @@ li a:hover {
 }
 
 .menu {
-  --s: 35px;
+  --s: 30px;
   --c: var(--color-white);
   height: var(--s);
   width: var(--s);
