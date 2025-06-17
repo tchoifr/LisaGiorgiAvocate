@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>https://lisagiorgiavocat.netlify.app/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Politique de confidentialité -->
+  <url>
+    <loc>https://lisagiorgiavocat.netlify.app/politique-confidentialite</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Mentions légales -->
+  <url>
+    <loc>https://lisagiorgiavocat.netlify.app/mentions-legales</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Mentions légales de l'éditeur (Natam) -->
+  <url>
+    <loc>https://natam.fr/mentions-legales</loc>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
