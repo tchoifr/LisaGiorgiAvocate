@@ -1,110 +1,240 @@
-@media (max-width: 1024px) {
-    .service-item{
-     width: 45%;
-    }
-    .blog-col{
-     width: 45%;
-    }
+/* ==========================================================================
+   Lisa Giorgi – Avocate | Adaptations responsive
+   ========================================================================== */
 
-   }
-
-  @media (min-width: 901px) {
-    .menu {
-      display: none;
-    }
-  
-    .nav ul {
-      display: flex; 
-    }
-   
+/* ---------- Tablette large ---------- */
+@media (max-width: 1100px) {
+  .hero-inner {
+    gap: 40px;
   }
- 
-   @media (max-width: 900px) {
-     .blog-col{
-         width: 70%;
-         min-height: 430px;
-        }
-        .bloc-hero img {
-          width: 70px;
-          height: 90px;
-      }
-      .bloc-hero{
-        margin-top: 40px;
-      }
-      .logo img {
-        width: 70px !important;
-        height: 70px !important;
-      }
-        .nav ul {
-          display: none;
-          flex-direction: column;
-          align-items: center;
-          position: absolute;
-          top: 45px;
-          right: -10px;
-          width: 250px;
-          padding: 10px;
-          background-color: var(--secondary-color);
-          padding-top: 20px;
-          gap: 20px;
-          transition: transform 0.4s ease-in-out;
-          transform: translateY(-100%);
-      }
-    .hero-bloc-text h1{
-      font-size: 30px;
-    }
-    .hero-bloc-text h2{
-      font-size: 15px;
-    }
-      .nav.open ul {
-        display: flex;
-        transform: translateY(0); /* Menu glisse vers le bas lorsque ouvert */
-      }
-        .footer-container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-         }
-       
-         .footer-logos {
-            justify-content: center;
-            margin-bottom: 20px;
-         }
-       
-         .map-container iframe {
-            width: 100%;
-            max-width: 100%;
-         }
-   }
-   @media (max-width: 767px){
- 
-    .hero-bloc-text{
-      width: 100%;
-    }
- 
-   }
-   @media (max-width: 480px) {
-     .service-item{
-         width: 100%;
-        }
-        .blog-col {
-         width: 95%;
-     }
-      h1{
-         font-size: 25px !important;
-     }
-     h3{
-         font-size: 20px !important;
-     }
-     .about, .contact {
-         padding: 0px;
-     }
-     .container-why {
-         padding: 0px;
-     }
-     .blog-card{
-      padding: 0px;
-     }
-  
-   }
- 
+
+  .domain {
+    gap: 40px;
+    padding: 40px;
+  }
+
+  .fee {
+    padding: 34px 28px;
+  }
+}
+
+/* ---------- Tablette / mobile : navigation burger ---------- */
+@media (max-width: 900px) {
+  :root {
+    --header-h: 74px;
+  }
+
+  .logo img {
+    height: 48px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 24px 24px;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 24px 40px rgba(35, 45, 41, 0.12);
+  }
+
+  .nav.open .nav-list {
+    display: flex;
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 16px 4px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-list a:not(.nav-cta)::after {
+    display: none;
+  }
+
+  .nav-list .nav-cta {
+    margin: 18px 0 0;
+    padding: 15px 24px;
+    text-align: center;
+    border-bottom: 0;
+  }
+
+  /* Hero */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    padding: 64px 24px 136px;
+    text-align: center;
+  }
+
+  .hero-bg {
+    object-position: 30% center;
+  }
+
+  .hero .eyebrow {
+    justify-content: center;
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  .hero .eyebrow::before {
+    display: none;
+  }
+
+  .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    border-left: 0;
+    padding-top: 22px;
+    border-top: 2px solid var(--secondary-color);
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-portrait {
+    width: min(100%, 280px);
+  }
+
+  /* Bandeau de confiance */
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-item + .trust-item {
+    border-left: 0;
+    border-top: 1px solid var(--border-color);
+  }
+
+  /* Sections */
+  .section {
+    padding: 80px 24px;
+  }
+
+  .section--first {
+    padding-top: 72px;
+  }
+
+  .section-head {
+    margin-bottom: 44px;
+  }
+
+  .domain {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .fees {
+    grid-template-columns: 1fr;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .map-frame {
+    min-height: 340px;
+  }
+
+  /* Pied de page */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 44px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .header-inner {
+    padding: 0 20px;
+  }
+
+  .nav-list {
+    padding: 8px 20px 24px;
+  }
+
+  .hero-inner {
+    padding: 52px 20px 128px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 15vw, 4rem);
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .trust {
+    padding: 0 20px;
+  }
+
+  .trust-item {
+    padding: 26px 24px;
+  }
+
+  .section {
+    padding: 68px 20px;
+  }
+
+  .section--first {
+    padding-top: 60px;
+  }
+
+  .domain {
+    padding: 30px 24px;
+  }
+
+  .domain h3 {
+    font-size: 1.8rem;
+  }
+
+  .fee {
+    padding: 32px 26px;
+  }
+
+  .contact-actions .btn {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 60px 20px 0;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .page-hero {
+    padding: 56px 20px 60px;
+  }
+
+  .legal {
+    padding: 56px 20px 80px;
+  }
+}
